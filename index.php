@@ -89,17 +89,17 @@
                 input[type="text"], input[type="text"] { width: calc(100% - 20px); padding: 8px; border: 4px solid #ccc; border-radius: 3px; }
                 button { padding: 20px 25px; background-color: #1000f7ff; color: white; border: none; border-radius: 3px; cursor: pointer; }
                 button.update { background-color: #3008e2ff; }
-                table {width: 100%; border-collapse: separate;border-spacing: 0px;border-radius: 10px; border: 1px solid #ffffff; }
+                table {width: 100%; border-collapse: separate;border-spacing: 10px;border-radius: 10px; border: 1px solid #ffffff; }
                 th, td { border: 1px solid #fdfafaff; padding: 20px; text-align: left;margin: 50px;}
                 th { background-color: #181515ff; }
                 a { color: #00fa00ff; text-decoration: none; }
                 a.delete { color: #da1010ff; margin-left: 10px; }
             </style>
-           
+              <img src="https://lirp.cdn-website.com/388815c9/dms3rep/multi/opt/logo-clube-de-leitura-SOMBRA-640w.png" alt="" style = "position relative;bottom: 30px; marin-bottom: 60px;float: right;" />
         </head>
         <body>
             <div class="container">
-                <h1>CADASTRO DO CLUBE DE LEITURA</h1>
+                <h1>CADASTRO DO CLUBE</h1>
                 <form action="index.php" method="POST">
                     <input type="hidden" name="id" value="<?php echo $id_edicao; ?>">
                     <div>
@@ -161,6 +161,7 @@
                             <th>Livro</th>
                             <th>Genero</th>
                             <th>Nota</th>
+                            <th>Editar/Excluir</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -177,7 +178,7 @@
                                     <td><?php echo htmlspecialchars($pessoa['nota']); ?></td>
                                     <td>
                                         <a href="index.php?acao=editar&id=<?php echo $pessoa['id']; ?>">Editar</a>
-                                        <a href="index.php?acao=deletar&id=<?php echo $pessoa['id']; ?>" class="delete" onclick="return confirm('Tem certeza que deseja excluir esta pessoa?');">Deletar</a>
+                                        <a href="index.php?acao=deletar&id=<?php echo $pessoa['id']; ?>" class="delete" onclick="return confirm('Tem certeza que deseja excluir esta pessoa?');">Excluir</a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>
