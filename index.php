@@ -79,7 +79,6 @@
 ?>
             <title>CRUD - PHP/Array</title>
             <style>
-                
                 body { font-family: Arial, sans-serif; margin: 20px; color: #ffffffff;}    
                 body {background-color: #181515ff;}
                 h1, h2 {color: #d3d3d3ff; }
